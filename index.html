@@ -50,6 +50,49 @@
             margin-bottom: 30px;
             font-size: 1.1em;
         }
+        
+        /* Sorting Controls */
+        .sort-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .sort-btn {
+            padding: 10px 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+            font-weight: 600;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .sort-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        .sort-btn.active {
+            background: #fff;
+            color: #764ba2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .sort-btn .arrow {
+            display: inline-block;
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .sort-btn.asc .arrow {
+            transform: rotate(180deg);
+        }
+
 
         /* Table Wrapper for Mobile Responsiveness */
         .table-wrapper {
@@ -98,6 +141,11 @@
         .demand-4 { color: #9ef01a; font-weight: 600; } /* Bright Green */
         .demand-5 { color: #48bfe3; font-weight: 600; } /* Bright Blue */
 
+        /* Price Styling */
+        .price-low { color: #a9d6e5; } /* Light Blue */
+        .price-mid { color: #ffc971; } /* Light Orange */
+        .price-high { color: #c3ff99; font-weight: 700; } /* Bright Green */
+
         /* Footer */
         .footer {
             text-align: center;
@@ -113,54 +161,24 @@
         <h1>Anomic Item Value List</h1>
         <p class="subtitle">Community-sourced prices and demand ratings.</p>
 
+        <div class="sort-controls">
+            <button class="sort-btn active" data-sort="event">Event <span class="arrow">▼</span></button>
+            <button class="sort-btn" data-sort="price">Price <span class="arrow">▼</span></button>
+            <button class="sort-btn" data-sort="demand">Demand <span class="arrow">▼</span></button>
+        </div>
+
         <div class="table-wrapper">
             <table class="value-table">
                 <thead>
                     <tr>
                         <th>Item Name</th>
+                        <th>Event</th>
                         <th>Price</th>
                         <th>Demand</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr><td>Al-right Van</td><td>83.14k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Beach Buggy</td><td>58.02k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Blood Moon Roadster</td><td>99.17k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Blood Moon VHS Tape</td><td>414.71k</td><td class="demand-4">4/5</td></tr>
-                    <tr><td>Bunny Bus</td><td>444.34k</td><td class="demand-4">4/5</td></tr>
-                    <tr><td>Caroline</td><td>78.47k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Christmas Hat (Santa)</td><td>149.19k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Christmas Hatch</td><td>1.34m</td><td class="demand-4">4/5</td></tr>
-                    <tr><td>Christmas Humvee</td><td>53.70k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Christmas RV</td><td>41.85k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Cute Coupe</td><td>1.32m</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Double Decker Bus (DDB)</td><td>382.49k</td><td class="demand-4">4/5</td></tr>
-                    <tr><td>Freedom Firework Kit</td><td>93.85k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Grand Plan Sedan (GPS)</td><td>432.44k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Hearse</td><td>548.92k</td><td class="demand-2">2/5</td></tr>
-                    <tr><td>Hippie Van</td><td>1.93m</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Lucky Tophat</td><td>99.81k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>MP</td><td>182.97k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Medi Kit</td><td>414.30k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Micro Car</td><td>95.76k</td><td class="demand-4">4/5</td></tr>
-                    <tr><td>New Beginnings(nb) Firework Kit</td><td>162.14k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>OG Ak</td><td>97.40k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>OG Hypercar</td><td>99.84k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>OG Sprayer</td><td>902.50k</td><td class="demand-2">2/5</td></tr>
-                    <tr><td>PWFC VHS Tape</td><td>855.36k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Patriotic Firework Kit</td><td>162.50k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Patriotic Pickup</td><td>186.43k</td><td class="demand-4">4/5</td></tr>
-                    <tr><td>Reindeer Van</td><td>1.34m</td><td class="demand-4">4/5</td></tr>
-                    <tr><td>Rocket 88</td><td>81.78k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Ski Van</td><td>1.33m</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Snowplow Truck</td><td>81.28k</td><td class="demand-4">4/5</td></tr>
-                    <tr><td>Spirit Speedster</td><td>97.91k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Sydney Sleeper</td><td>53.69k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>The General</td><td>93.84k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>The Troublemaker</td><td>195.33k</td><td class="demand-4">4/5</td></tr>
-                    <tr><td>Triple Firework Kit</td><td>40.16k</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Winter Wagon</td><td>1.32m</td><td class="demand-3">3/5</td></tr>
-                    <tr><td>Wooden Sled</td><td>31.59k</td><td class="demand-2">2/5</td></tr>
+                <tbody id="value-list-body">
+                    <!-- Table rows will be inserted here by JavaScript -->
                 </tbody>
             </table>
         </div>
@@ -168,6 +186,154 @@
             <p>This is a static list based on images provided. Values may change over time.</p>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- DATA ---
+            // The raw data for all items, including a 'yearOrder' for chronological sorting.
+            const itemData = [
+                { name: "New Beginnings(nb) Firework Kit", event: "New Year's", price: 162140, demand: 3, yearOrder: 1 },
+                { name: "Triple Firework Kit", event: "New Year's", price: 40160, demand: 3, yearOrder: 1 },
+                { name: "Caroline", event: "Valentine's", price: 78470, demand: 3, yearOrder: 2 },
+                { name: "Cute Coupe", event: "Valentine's", price: 1320000, demand: 3, yearOrder: 2 },
+                { name: "Lucky Tophat", event: "St. Patrick's", price: 99810, demand: 3, yearOrder: 3 },
+                { name: "Bunny Bus", event: "Easter", price: 444340, demand: 4, yearOrder: 4 },
+                { name: "Al-right Van", event: "Pride", price: 83140, demand: 3, yearOrder: 5 },
+                { name: "Freedom Firework Kit", event: "4th of July", price: 93850, demand: 3, yearOrder: 6 },
+                { name: "Patriotic Firework Kit", event: "4th of July", price: 162500, demand: 3, yearOrder: 6 },
+                { name: "Patriotic Pickup", event: "4th of July", price: 186430, demand: 4, yearOrder: 6 },
+                { name: "Beach Buggy", event: "Summer", price: 58020, demand: 3, yearOrder: 7 },
+                { name: "Double Decker Bus (DDB)", event: "Summer", price: 382490, demand: 4, yearOrder: 7 },
+                { name: "Hippie Van", event: "Summer", price: 1930000, demand: 3, yearOrder: 7 },
+                { name: "Sydney Sleeper", event: "Summer", price: 53690, demand: 3, yearOrder: 7 },
+                { name: "Blood Moon Roadster", event: "Halloween", price: 99170, demand: 3, yearOrder: 8 },
+                { name: "Blood Moon VHS Tape", event: "Halloween", price: 414710, demand: 4, yearOrder: 8 },
+                { name: "Hearse", event: "Halloween", price: 548920, demand: 2, yearOrder: 8 },
+                { name: "Spirit Speedster", event: "Halloween", price: 97910, demand: 3, yearOrder: 8 },
+                { name: "Ski Van", event: "Winter", price: 1330000, demand: 3, yearOrder: 9 },
+                { name: "Snowplow Truck", event: "Winter", price: 81280, demand: 4, yearOrder: 9 },
+                { name: "Christmas Hat (Santa)", event: "Christmas", price: 149190, demand: 3, yearOrder: 10 },
+                { name: "Christmas Hatch", event: "Christmas", price: 1340000, demand: 4, yearOrder: 10 },
+                { name: "Christmas Humvee", event: "Christmas", price: 53700, demand: 3, yearOrder: 10 },
+                { name: "Christmas RV", event: "Christmas", price: 41850, demand: 3, yearOrder: 10 },
+                { name: "Reindeer Van", event: "Christmas", price: 1340000, demand: 4, yearOrder: 10 },
+                { name: "Winter Wagon", event: "Christmas", price: 1320000, demand: 3, yearOrder: 10 },
+                { name: "Wooden Sled", event: "Christmas", price: 31590, demand: 2, yearOrder: 10 },
+                { name: "Grand Plan Sedan (GPS)", event: "Heist", price: 432440, demand: 3, yearOrder: 11 },
+                { name: "The Troublemaker", event: "Heist", price: 195330, demand: 4, yearOrder: 11 },
+                { name: "MP", event: "Military", price: 182970, demand: 3, yearOrder: 12 },
+                { name: "The General", event: "Military", price: 93840, demand: 3, yearOrder: 12 },
+                { name: "Rocket 88", event: "Retro", price: 81780, demand: 3, yearOrder: 13 },
+                { name: "OG Ak", event: "Classic", price: 97400, demand: 3, yearOrder: 14 },
+                { name: "OG Hypercar", event: "Classic", price: 99840, demand: 3, yearOrder: 14 },
+                { name: "OG Sprayer", event: "Classic", price: 902500, demand: 2, yearOrder: 14 },
+                { name: "Medi Kit", event: "Community", price: 414300, demand: 3, yearOrder: 15 },
+                { name: "PWFC VHS Tape", event: "Community", price: 855360, demand: 3, yearOrder: 15 },
+                { name: "Micro Car", event: "General", price: 95760, demand: 4, yearOrder: 16 },
+            ];
+
+            // --- STATE ---
+            let currentSort = 'event';
+            let sortDirection = 'asc';
+
+            // --- DOM ELEMENTS ---
+            const tableBody = document.getElementById('value-list-body');
+            const sortButtons = document.querySelectorAll('.sort-btn');
+
+            // --- HELPER FUNCTIONS ---
+            
+            // Function to format price (e.g., 1.34m or 162.14k)
+            function formatPrice(p) {
+                if (p >= 1000000) {
+                    return (p / 1000000).toFixed(2) + 'm';
+                } else if (p >= 1000) {
+                    return (p / 1000).toFixed(2) + 'k';
+                }
+                return p;
+            }
+            
+            // Function to get the price color class
+            function getPriceClass(p) {
+                if (p >= 1000000) return 'price-high';
+                if (p >= 200000) return 'price-mid';
+                return 'price-low';
+            }
+
+            // --- RENDER FUNCTION ---
+            
+            // Function to render the table rows based on the sorted data
+            function renderTable() {
+                tableBody.innerHTML = ''; // Clear existing table
+                
+                // Create and append a row for each item
+                itemData.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${item.name}</td>
+                        <td>${item.event}</td>
+                        <td class="${getPriceClass(item.price)}">${formatPrice(item.price)}</td>
+                        <td class="demand-${item.demand}">${item.demand}/5</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            }
+
+            // --- SORTING LOGIC ---
+            
+            // Function to handle the sorting of the data array
+            function sortData() {
+                itemData.sort((a, b) => {
+                    let valA, valB;
+
+                    if (currentSort === 'event') {
+                        valA = a.yearOrder;
+                        valB = b.yearOrder;
+                    } else {
+                        valA = a[currentSort];
+                        valB = b[currentSort];
+                    }
+
+                    if (sortDirection === 'asc') {
+                        return valA > valB ? 1 : -1;
+                    } else {
+                        return valA < valB ? 1 : -1;
+                    }
+                });
+                renderTable();
+            }
+
+            // --- EVENT LISTENERS ---
+
+            // Add click listener to each sort button
+            sortButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const newSort = button.dataset.sort;
+
+                    // If clicking the same button, reverse direction
+                    if (currentSort === newSort) {
+                        sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+                    } else {
+                        // If clicking a new button, set to default direction
+                        currentSort = newSort;
+                        sortDirection = 'asc';
+                    }
+                    
+                    // Update button active states
+                    sortButtons.forEach(btn => {
+                        btn.classList.remove('active', 'asc', 'desc');
+                        if (btn.dataset.sort === currentSort) {
+                            btn.classList.add('active', sortDirection);
+                        }
+                    });
+
+                    sortData();
+                });
+            });
+
+            // --- INITIAL RENDER ---
+            sortData(); // Initial sort and render on page load
+        });
+    </script>
 
 </body>
 </html>
