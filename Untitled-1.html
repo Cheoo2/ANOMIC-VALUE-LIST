@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anomic Community Value List</title>
+    <style>
+        /* Google Font for a modern look */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        /* Main Container with Glassmorphism Effect */
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* Header */
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            font-size: 2.5em;
+            margin-top: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #e0e0e0;
+            margin-top: -15px;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        /* Table Wrapper for Mobile Responsiveness */
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        /* Value Table */
+        .value-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.1em;
+        }
+
+        .value-table th, .value-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .value-table th {
+            background: linear-gradient(135deg, #5e72eb 0%, #7b57c2 100%);
+            color: #ffffff;
+            font-weight: 600;
+        }
+        
+        /* Rounded corners for table headers */
+        .value-table th:first-child { border-top-left-radius: 10px; }
+        .value-table th:last-child { border-top-right-radius: 10px; }
+
+        .value-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .value-table tbody tr {
+            transition: background-color 0.3s ease;
+        }
+
+        .value-table tbody tr:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Demand Styling */
+        .demand-1 { color: #ff6b6b; font-weight: 600; } /* Bright Red */
+        .demand-2 { color: #ff8e71; font-weight: 600; } /* Orange */
+        .demand-3 { color: #ffd166; font-weight: 600; } /* Yellow */
+        .demand-4 { color: #9ef01a; font-weight: 600; } /* Bright Green */
+        .demand-5 { color: #48bfe3; font-weight: 600; } /* Bright Blue */
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #d0d0d0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Anomic Item Value List</h1>
+        <p class="subtitle">Community-sourced prices and demand ratings.</p>
+
+        <div class="table-wrapper">
+            <table class="value-table">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                        <th>Demand</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Al-right Van</td><td>83.14k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Beach Buggy</td><td>58.02k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Blood Moon Roadster</td><td>99.17k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Blood Moon VHS Tape</td><td>414.71k</td><td class="demand-4">4/5</td></tr>
+                    <tr><td>Bunny Bus</td><td>444.34k</td><td class="demand-4">4/5</td></tr>
+                    <tr><td>Caroline</td><td>78.47k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Christmas Hat (Santa)</td><td>149.19k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Christmas Hatch</td><td>1.34m</td><td class="demand-4">4/5</td></tr>
+                    <tr><td>Christmas Humvee</td><td>53.70k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Christmas RV</td><td>41.85k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Cute Coupe</td><td>1.32m</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Double Decker Bus (DDB)</td><td>382.49k</td><td class="demand-4">4/5</td></tr>
+                    <tr><td>Freedom Firework Kit</td><td>93.85k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Grand Plan Sedan (GPS)</td><td>432.44k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Hearse</td><td>548.92k</td><td class="demand-2">2/5</td></tr>
+                    <tr><td>Hippie Van</td><td>1.93m</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Lucky Tophat</td><td>99.81k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>MP</td><td>182.97k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Medi Kit</td><td>414.30k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Micro Car</td><td>95.76k</td><td class="demand-4">4/5</td></tr>
+                    <tr><td>New Beginnings(nb) Firework Kit</td><td>162.14k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>OG Ak</td><td>97.40k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>OG Hypercar</td><td>99.84k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>OG Sprayer</td><td>902.50k</td><td class="demand-2">2/5</td></tr>
+                    <tr><td>PWFC VHS Tape</td><td>855.36k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Patriotic Firework Kit</td><td>162.50k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Patriotic Pickup</td><td>186.43k</td><td class="demand-4">4/5</td></tr>
+                    <tr><td>Reindeer Van</td><td>1.34m</td><td class="demand-4">4/5</td></tr>
+                    <tr><td>Rocket 88</td><td>81.78k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Ski Van</td><td>1.33m</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Snowplow Truck</td><td>81.28k</td><td class="demand-4">4/5</td></tr>
+                    <tr><td>Spirit Speedster</td><td>97.91k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Sydney Sleeper</td><td>53.69k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>The General</td><td>93.84k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>The Troublemaker</td><td>195.33k</td><td class="demand-4">4/5</td></tr>
+                    <tr><td>Triple Firework Kit</td><td>40.16k</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Winter Wagon</td><td>1.32m</td><td class="demand-3">3/5</td></tr>
+                    <tr><td>Wooden Sled</td><td>31.59k</td><td class="demand-2">2/5</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">
+            <p>This is a static list based on images provided. Values may change over time.</p>
+        </div>
+    </div>
+
+</body>
+</html>
